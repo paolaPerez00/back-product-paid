@@ -1,0 +1,45 @@
+{
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "root": true,
+  "ignorePatterns": ["dist/**/*", "build/**/*", "node_modules/**/*", "*.spec.ts", "*.spec.js"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.json"],
+        "createDefaultProgram": true
+      },
+      "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+      "rules": {
+        "eqeqeq": ["error", "always"],
+        "no-var": "error",
+        "prefer-const": "error",
+        "curly": ["error", "all"],
+        "no-console": "error",
+        "no-debugger": "error",
+        "quotes": ["error", "single"],
+        "indent": ["error", 2],
+        "comma-dangle": ["error", "never"],
+        "no-trailing-spaces": "error",
+        "eol-last": ["error", "always"],
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+        "@typescript-eslint/no-floating-promises": "error",
+        "@typescript-eslint/consistent-type-imports": ["error", { "prefer": "no-type-imports" }],
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/no-unsafe-argument": "off",
+        "max-len": ["error", { "code": 180 }],
+        "no-multiple-empty-lines": ["error", { "max": 1 }]
+      }
+    }
+  ]
+}
